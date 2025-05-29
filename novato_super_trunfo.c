@@ -1,7 +1,9 @@
+//Olá quero apenas verificar se está tudo certo, não sei se preciso terminar tudo antes de enviar mas estou enviando essa versão apenas para verificar se está tudo correto
+
 #include <stdio.h>
 
 int main () {
-
+    
     char carta1_estado[2] = ("");
     char carta1_codigo[4] = ("");
     char carta1_nomecidade[20] = ("");
