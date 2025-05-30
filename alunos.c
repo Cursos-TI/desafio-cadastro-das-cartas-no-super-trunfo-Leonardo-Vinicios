@@ -18,7 +18,7 @@ int main () {
 
   media = (float) (nota1 + nota2 + nota3) / 3;
 
-  printf("A média é: %f", media);
+  printf("A média é: %.2f", media);
 
   return 0;
   
