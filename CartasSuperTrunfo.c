@@ -14,6 +14,7 @@ int main () {
     float carta1_DensidadePopulacional = 0;
     float carta1_pibCapta = 0;
     float carta1_InversoDensidade;
+    int opcao;
     
 
     char carta2_estado[2] = ("");
@@ -128,38 +129,97 @@ int main () {
     /*
     Usei para testar se os valores estavam certos, descobri que se não colocar o numero pos virgula na calculadora a soma da calculadora da um valor a mais
     printf("SUPER PODER CARTA1 %.2f\n", carta1_SuperPoder);
-    printf("SUPER PODER CARTA2 %.2f\n", carta2_SuperPoder);
-    
+    printf("SUPER PODER CARTA2 %.2f\n", carta2_SuperPoder);   
     Inicio comparação
     */
     
-   /* Comparação usada no TEMA 1  
-
-    printf("-- Comparação de Cartas -- \n");
-    printf("(Carta 1 vence se Vencedor = 1 - Carta 2 vence se Vencedor = 0)\n");
-    printf("Carta 1 População: %lu - Carta 2 População: %lu - Vencedor: %d \n",carta1_populacao, carta2_populacao , carta1_populacao > carta2_populacao);
-    printf("Carta 1 Área: %.2f - Carta 2 Área: %.2f - Vencedor: %d \n",carta1_area ,carta2_area ,carta1_area > carta2_area);
-    printf("Carta 1 PIB: %.2f -Carta 2 PIB:  %.2f - Vencedor: %d \n",carta1_pib , carta2_pib,carta1_pib > carta2_pib);
-    printf("Carta 1 Pontos turisticos: %d -  Carta 2 Pontos turisticos: %d - Vencedor: %d \n",carta1_pontosturisticos, carta2_pontosturisticos, carta1_pontosturisticos > carta2_pontosturisticos);
-    printf("Carta 1 Densidade Pop: %.2f - Carta 2 Densidade Pop: %.2f - Vencedor: %d \n",carta1_DensidadePopulacional , carta2_DensidadePopulacional ,carta1_DensidadePopulacional < carta2_DensidadePopulacional);
-    printf("Carta 1 PIB per Capita: %.2f -  Carta 2 PIB per Capita: %.2f - Vencedor: %d \n", carta1_pibCapta , carta2_pibCapta ,carta1_pibCapta > carta2_pibCapta);
-    printf("Carta 1 Super Poder: %.2f - Carta 2 Super Poder: %.2f - Vencedor: %d \n", carta1_SuperPoder , carta2_SuperPoder ,carta1_SuperPoder > carta2_SuperPoder);
-    */
-
     //Comparação Tema 2 
 
-    printf("Comparação de Cartas (Atributo: Pontos turisticos): \n");
-    printf("Carta 1 - %s : %d \n", carta1_nomecidade, carta1_pontosturisticos);
-    printf("Carta 2 - %s : %d \n", carta2_nomecidade, carta2_pontosturisticos);
+    printf("--- Comparação de Cartas --- \n");
+    printf("Escolha um atributo para a batalha: \n");
+    printf("1 - População\n");
+    printf("2 - Área\n");
+    printf("3 - PIB\n");
+    printf("4 - Número de pontos turísticos\n");
+    printf("5 - Densidade demográfica\n");
+    scanf("%d", &opcao);
 
-    if (carta1_pontosturisticos > carta2_pontosturisticos)
-    {
-        printf("Resultado: Carta 1 (%s) Venceu! \n", carta1_nomecidade);
-    } 
-    else 
-    {
-        printf("Resultado: Carta 2 (%s) Venceu! \n", carta2_nomecidade);
-    }
     
+    switch (opcao)
+    {
+    case 1:
+        printf("\n----- É HORA DO DUELOOOOOOOOOO -----\n \n");
+        printf("Duelo entre: %s x %s\n", carta1_nomecidade, carta2_nomecidade);
+        printf("Atributo escolhido: População (Obs: maior valor vence)\n");
+        printf("Carta 1 Populaçao: %lu x Carta 2 População: %lu\n", carta1_populacao, carta2_populacao);
+        if (carta1_populacao == carta2_populacao){
+            printf("EMPATE! \n");
+        } else if (carta1_populacao > carta2_populacao){
+            printf("Carta 1 - %s VENCEU!\n", carta1_nomecidade);
+        } else{
+            printf("Carta 2 - %s VENCEU!\n", carta2_nomecidade);
+        }      
+    break;
+    
+    case 2:
+        printf("\n----- É HORA DO DUELOOOOOOOOOO -----\n \n");
+        printf("Duelo entre: %s x %s\n", carta1_nomecidade, carta2_nomecidade);
+        printf("Atributo escolhido: Área (Obs: maior valor vence)\n");
+        printf("Carta 1 Área: %.2f x Carta 2 Área: %.2f\n", carta1_area, carta2_area);
+        if (carta1_area == carta2_area){
+            printf("EMPATE! \n");
+        } else if (carta1_area > carta2_area){
+            printf("Carta 1 - %s VENCEU!\n", carta1_nomecidade);
+        } else{
+            printf("Carta 2 - %s VENCEU!\n", carta2_nomecidade);
+        }      
+    break;
+
+    case 3:
+        printf("\n----- É HORA DO DUELOOOOOOOOOO -----\n \n");
+        printf("Duelo entre: %s x %s\n", carta1_nomecidade, carta2_nomecidade);
+        printf("Atributo escolhido: PIB (Obs: maior valor vence)\n");
+        printf("Carta 1 PIB: %.2f x Carta 2 PIB: %.2f\n", carta1_pib, carta2_pib);
+        if (carta1_pib == carta2_pib){
+            printf("EMPATE! \n");
+        } else if (carta1_pib > carta2_pib){
+            printf("Carta 1 - %s VENCEU!\n", carta1_nomecidade);
+        } else{
+            printf("Carta 2 - %s VENCEU!\n", carta2_nomecidade);
+        }      
+    break;
+
+    case 4:
+        printf("\n----- É HORA DO DUELOOOOOOOOOO -----\n \n");
+        printf("Duelo entre: %s x %s\n", carta1_nomecidade, carta2_nomecidade);
+        printf("Atributo escolhido: Pontos turisticos (Obs: maior valor vence)\n");
+        printf("Carta 1 Pontos turisticos: %d x Carta 2 Pontos turisticos: %d\n", carta1_pontosturisticos, carta2_pontosturisticos);
+        if (carta1_pontosturisticos == carta2_pontosturisticos){
+            printf("EMPATE! \n");
+        } else if (carta1_pontosturisticos > carta2_pontosturisticos){
+            printf("Carta 1 - %s VENCEU!\n", carta1_nomecidade);
+        } else{
+            printf("Carta 2 - %s VENCEU!\n", carta2_nomecidade);
+        }      
+    break;
+
+    case 5:
+        printf("\n----- É HORA DO DUELOOOOOOOOOO -----\n \n");
+        printf("Duelo entre: %s x %s\n", carta1_nomecidade, carta2_nomecidade);
+        printf("Atributo escolhido: Densidade Populacional (Obs: Menor valor VENCE.)\n");
+        printf("Carta 1 Densidade Populacional: %.2f x Carta 2 Densidade Populacional: %.2f\n", carta1_DensidadePopulacional, carta2_DensidadePopulacional);
+        if (carta1_DensidadePopulacional == carta2_DensidadePopulacional){
+            printf("EMPATE! \n");
+        } else if (carta1_DensidadePopulacional < carta2_DensidadePopulacional){
+            printf("Carta 1 - %s VENCEU!\n", carta1_nomecidade);
+        } else{
+            printf("Carta 2 - %s VENCEU!\n", carta2_nomecidade);
+        }      
+    break;    
+    
+    default:
+    printf("Opção invalida.");
+        break;
+    }
 
 }
